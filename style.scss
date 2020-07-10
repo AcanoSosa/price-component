@@ -1,0 +1,164 @@
+$Cyan: hsl(179, 62%, 43%);
+$Bright-Yellow: hsl(71, 73%, 54%);
+$Ligh-Gray: hsl(204, 43%, 93%);
+$Grayish-Blue: hsl(218, 22%, 67%);
+@mixin text-style ($weight, $size, $color) {
+    font-family: 'Karla', sans-serif;
+    font-weight: $weight ;
+    font-size: $size;
+    color:$color;
+    
+}
+@mixin screen ($size){
+    @if $size == phone {
+        @media (max-width:599px) {@content;}
+    }
+    @else if $size == tablet-p {
+        @media (min-width:600px) and (max-width:899px){@content;}
+    }
+    @else if $size == tablet-l{
+        @media (min-width:900px) and (max-width:1199px){@content;}
+    }
+}
+
+body{
+    background-color: $Ligh-Gray;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    margin:0;
+ }
+ .component{
+     width: 45vw;
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     flex-wrap: wrap;
+     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+     min-width: 700px;
+     @include screen(tablet-l){
+         width: 80vw;
+         max-width:700px;
+         min-width: initial;
+     }
+     @include screen(tablet-p){
+        width: 80vw;
+        max-width:700px;
+        min-width: initial;
+     }
+     @include screen(phone){
+         width:90%;
+         margin: 40px 0 40px 0;
+         min-width: initial;
+     }
+     .main{
+         width: 100%;
+         background-color: #fff;
+         border-radius: 8px 8px 0 0;
+         .container{
+             width: 85%;
+             padding:30px 0 20px 40px;
+             p{
+                 @include text-style(400,16px , $Grayish-Blue);
+                 margin-top:0;
+             }
+         }
+     }
+     .suscripton{
+         width:50%;
+         background-color: $Cyan;
+         display: flex;
+         flex-direction: row;
+         justify-content: center;
+         flex-wrap: wrap;
+         border-radius: 0 0 0 8px;
+         @include screen(phone){
+            width:100%;
+            border-radius: 0px;
+        }
+         .container{
+             width: 80%;
+             padding: 30px;
+             @include text-style(400, 16px ,#fff);
+             @include screen (phone){
+                 width: 100%
+             }
+             .price{
+                 display:flex;
+                 flex-direction: row;
+                 align-items: center;
+                 .dolar{
+                     @include text-style(700, 25px , #fff );
+                     margin: 0px 10px 0px 0px;
+                     opacity: 100%; 
+                 }
+                 p{
+                    @include text-style(400, 14px ,#fff);
+                    opacity: 50%; 
+                 }
+             }
+             p{
+                @include text-style(400, 16px ,#fff);
+                opacity: 90%;
+                margin: 10px 0px 0px 0px;
+             }
+         }
+     }
+     .us{
+        width:50%;
+        background-color: #4ABEBD;
+        border-radius: 0 0 8px 0;
+        @include screen(phone){
+            width:100%;
+            border-radius: 0 0 8px 8px;
+        }
+        .container{
+            width: 80%;
+            padding: 30px;
+            margin:0;
+            ul{
+            list-style-type: none;
+            @include text-style(400, 14px , #fff);
+            opacity: 80%;
+            line-height: 20px;
+            padding:0;
+            }
+        }
+     }
+ }
+ button{
+     background-color:hsl(71, 73%, 54%);
+     border-radius: 5px;
+     @include text-style(700, 14px,#fff);
+     display:flex;
+     justify-content: center;
+     align-content: center;
+     padding-top: 14px;
+     padding-bottom: 14px;
+     width: 100%;
+     max-width: 250px;
+     min-width: 100px;
+     border-style: none;
+     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+     margin-top: 30px;
+
+     @include screen(phone){
+        width:100%;
+        margin-top: 20px;
+    }
+ }
+ h2{
+     @include text-style(700,25px,$Cyan);
+     margin: 0 0 20px 0 ;
+ }
+ h3{
+    @include text-style(400,20px,$Bright-Yellow);
+    margin: 10px 0 10px 0;
+ }
+ h4{
+     @include text-style(700,18px ,#fff );
+     margin:10px 0 20px 0;
+ }

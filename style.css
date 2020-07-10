@@ -1,0 +1,191 @@
+body {
+  background-color: #e5eff5;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.component {
+  width: 45vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  min-width: 700px;
+}
+@media (min-width: 900px) and (max-width: 1199px) {
+  .component {
+    width: 80vw;
+    max-width: 700px;
+    min-width: initial;
+  }
+}
+@media (min-width: 600px) and (max-width: 899px) {
+  .component {
+    width: 80vw;
+    max-width: 700px;
+    min-width: initial;
+  }
+}
+@media (max-width: 599px) {
+  .component {
+    width: 90%;
+    margin: 40px 0 40px 0;
+    min-width: initial;
+  }
+}
+.component .main {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 8px 8px 0 0;
+}
+.component .main .container {
+  width: 85%;
+  padding: 30px 0 20px 40px;
+}
+.component .main .container p {
+  font-family: "Karla", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #98a6bd;
+  margin-top: 0;
+}
+.component .suscripton {
+  width: 50%;
+  background-color: #2ab2af;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-radius: 0 0 0 8px;
+}
+@media (max-width: 599px) {
+  .component .suscripton {
+    width: 100%;
+    border-radius: 0px;
+  }
+}
+.component .suscripton .container {
+  width: 80%;
+  padding: 30px;
+  font-family: "Karla", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+}
+@media (max-width: 599px) {
+  .component .suscripton .container {
+    width: 100%;
+  }
+}
+.component .suscripton .container .price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.component .suscripton .container .price .dolar {
+  font-family: "Karla", sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  color: #fff;
+  margin: 0px 10px 0px 0px;
+  opacity: 100%;
+}
+.component .suscripton .container .price p {
+  font-family: "Karla", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #fff;
+  opacity: 50%;
+}
+.component .suscripton .container p {
+  font-family: "Karla", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+  opacity: 90%;
+  margin: 10px 0px 0px 0px;
+}
+.component .us {
+  width: 50%;
+  background-color: #4ABEBD;
+  border-radius: 0 0 8px 0;
+}
+@media (max-width: 599px) {
+  .component .us {
+    width: 100%;
+    border-radius: 0 0 8px 8px;
+  }
+}
+.component .us .container {
+  width: 80%;
+  padding: 30px;
+  margin: 0;
+}
+.component .us .container ul {
+  list-style-type: none;
+  font-family: "Karla", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #fff;
+  opacity: 80%;
+  line-height: 20px;
+  padding: 0;
+}
+
+button {
+  background-color: #c0df34;
+  border-radius: 5px;
+  font-family: "Karla", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  width: 100%;
+  max-width: 250px;
+  min-width: 100px;
+  border-style: none;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+@media (max-width: 599px) {
+  button {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+h2 {
+  font-family: "Karla", sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  color: #2ab2af;
+  margin: 0 0 20px 0;
+}
+
+h3 {
+  font-family: "Karla", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #c0df34;
+  margin: 10px 0 10px 0;
+}
+
+h4 {
+  font-family: "Karla", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+  margin: 10px 0 20px 0;
+}
+
+/*# sourceMappingURL=style.css.map */
